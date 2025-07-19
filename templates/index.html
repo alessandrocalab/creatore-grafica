@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Genera Grafica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #00ffcc;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,255,204,0.2);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #2a2a2a;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00ccaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎵 Genera la tua grafica personalizzata</h1>
+  <form method="POST">
+    
+    <label for="mesh">Tipo di mesh:</label>
+    <select name="mesh" id="mesh" required>
+      <option value="tee.png">T-shirt</option>
+      <option value="hoodie.png">Felpa (Hoodie)</option>
+      <option value="cover.png">Cover</option>
+    </select>
+
+    <label for="titolo">Nome della canzone:</label>
+    <input type="text" name="titolo" id="titolo" required>
+
+    <label for="autore">Autore (artista):</label>
+    <input type="text" name="autore" id="autore" required>
+
+    <label for="testo">Testo da inserire:</label>
+    <textarea name="testo" id="testo" rows="6" required></textarea>
+    
+    <label>
+  <input type="checkbox" name="correggi" checked>
+  Correggi automaticamente il testo
+  </label>
+
+    <button type="submit">🎨 Genera Immagine</button>
+  </form>
+</body>
+</html>
