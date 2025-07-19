@@ -22,7 +22,7 @@ def creaGrafica(tipoMesh,NC,T,A,C=True):
 
 
     #cerco i dati della canzone
-    album, titolo, autore = SpotyData(nomeCanzone,A)
+    album, autore, titolo = SpotyData(nomeCanzone,A)
 
     #verifico che il testo sia coretto
     if C:
@@ -96,7 +96,3 @@ def creaGrafica(tipoMesh,NC,T,A,C=True):
         draw.text((xAutore,yAutore),autore, font=fontAutore, fill="grey")
 
     return img
-
-
-
-
