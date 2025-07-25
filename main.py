@@ -27,7 +27,7 @@ def creaGrafica(tipoMesh,NC,T,A,C=True):
     #verifico che il testo sia coretto
     if C:
         fullLyrics=get_lyrics(autore, titolo)
-        testo = correggi_testo_utente(testo, fullLyrics, soglia=0.4)
+        testo = correggi_testo_utente(testo, fullLyrics, tolleranza=0.6)
 
 
     #carichiamo la base
